@@ -1,7 +1,9 @@
+import 'package:ecommerce_app/controller/onboarding_controller.dart';
 import 'package:ecommerce_app/core/class/apptheme.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/src/simple/get_view.dart';
 
-class CustomedButtonOnboarding extends StatelessWidget {
+class CustomedButtonOnboarding extends GetView<OnboardingControllerImplement> {
   const CustomedButtonOnboarding({super.key});
 
   @override
@@ -13,7 +15,9 @@ class CustomedButtonOnboarding extends StatelessWidget {
         color: Apptheme.blue,
         padding: EdgeInsets.symmetric(vertical: 8),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        onPressed: () {},
+        onPressed: () {
+          controller.next();
+        },
         child: Text(
           "Contnue",
           style: Theme.of(context).textTheme.titleMedium!.copyWith(
