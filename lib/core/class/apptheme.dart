@@ -11,12 +11,17 @@ class Apptheme {
         color: white,
         fontWeight: FontWeight.bold,
       ),
-      titleMedium: TextStyle(
+      titleLarge: TextStyle(
         fontSize: 26,
         color: black,
         fontWeight: FontWeight.bold,
       ),
-      bodyLarge: TextStyle(
+      titleMedium: TextStyle(
+        fontSize: 20,
+        color: white,
+        fontWeight: FontWeight.w700,
+      ),
+      bodyMedium: TextStyle(
         fontSize: 16,
         color: white,
         fontWeight: FontWeight.w400,

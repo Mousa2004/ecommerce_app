@@ -52,7 +52,9 @@ class CustomedSliderOnboarding extends GetView<OnboardingControllerImplement> {
           SizedBox(height: MediaQuery.sizeOf(context).height * 0.04),
           Text(
             onboardingList[index].bodyTitle!,
-            style: Theme.of(context).textTheme.titleLarge,
+            style: Theme.of(
+              context,
+            ).textTheme.titleMedium!.copyWith(color: Apptheme.black),
           ),
           SizedBox(height: 10),
           Padding(
