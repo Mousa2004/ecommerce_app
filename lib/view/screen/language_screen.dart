@@ -5,6 +5,7 @@ import 'package:ecommerce_app/view/widget/language/customedbuttonlang.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:get/state_manager.dart';
+import 'package:get/utils.dart';
 
 class LanguageScreen extends GetView<LocalController> {
   static const String routName = "/language";
@@ -17,20 +18,20 @@ class LanguageScreen extends GetView<LocalController> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Choose Language",
+            "chooseLanguage".tr,
             style: Theme.of(
               context,
             ).textTheme.titleLarge!.copyWith(color: Apptheme.blue),
           ),
           Customedbuttonlang(
-            text: "Arabic",
+            text: "arabic".tr,
             onPressed: () {
               controller.chaneLanguage("ar");
               Get.offNamed(Onboarding.routName);
             },
           ),
           Customedbuttonlang(
-            text: "English",
+            text: "english".tr,
             onPressed: () {
               controller.chaneLanguage("en");
               Get.offNamed(Onboarding.routName);

@@ -24,7 +24,7 @@ class CustomedSliderOnboarding extends GetView<OnboardingControllerImplement> {
               color: Apptheme.blue,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(32),
-                bottomRight: Radius.circular(150),
+                bottomRight: Radius.circular(100),
               ),
             ),
             child: SafeArea(
@@ -41,7 +41,9 @@ class CustomedSliderOnboarding extends GetView<OnboardingControllerImplement> {
                   Divider(color: Apptheme.white, endIndent: 150),
                   Text(
                     onboardingList[index].titleBody!,
-                    style: Theme.of(context).textTheme.bodyLarge,
+                    style: Theme.of(
+                      context,
+                    ).textTheme.bodyLarge!.copyWith(color: Apptheme.white),
                   ),
                 ],
               ),

@@ -3,6 +3,7 @@ import 'package:ecommerce_app/core/localization/local_controller.dart';
 import 'package:ecommerce_app/core/localization/translation.dart';
 import 'package:ecommerce_app/core/services/myservices.dart';
 import 'package:ecommerce_app/view/screen/auth/login_screen.dart';
+import 'package:ecommerce_app/view/screen/auth/register_screen.dart';
 import 'package:ecommerce_app/view/screen/language_screen.dart';
 import 'package:ecommerce_app/view/screen/onboarding.dart';
 import 'package:flutter/material.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(name: Onboarding.routName, page: () => Onboarding()),
         GetPage(name: LoginScreen.routName, page: () => LoginScreen()),
+        GetPage(name: RegisterScreen.routName, page: () => RegisterScreen()),
         GetPage(name: LanguageScreen.routName, page: () => LanguageScreen()),
       ],
       translations: MyTranslation(),

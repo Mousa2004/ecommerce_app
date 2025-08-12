@@ -4,6 +4,7 @@ class Apptheme {
   static const Color blue = Color(0xff037EEE);
   static const Color white = Colors.white;
   static const Color black = Colors.black;
+  static const Color grey = Color(0xffBCBEC0);
   static ThemeData lightTheme = ThemeData(
     textTheme: TextTheme(
       headlineMedium: TextStyle(

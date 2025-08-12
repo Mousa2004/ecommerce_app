@@ -2,6 +2,7 @@ import 'package:ecommerce_app/controller/onboarding_controller.dart';
 import 'package:ecommerce_app/core/class/apptheme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
+import 'package:get/get_utils/src/extensions/export.dart';
 
 class CustomedButtonOnboarding extends GetView<OnboardingControllerImplement> {
   const CustomedButtonOnboarding({super.key});
@@ -19,7 +20,7 @@ class CustomedButtonOnboarding extends GetView<OnboardingControllerImplement> {
           controller.next();
         },
         child: Text(
-          "Contnue",
+          "contnue".tr,
           style: Theme.of(context).textTheme.titleMedium!.copyWith(
             color: Apptheme.white,
             fontSize: 20,
