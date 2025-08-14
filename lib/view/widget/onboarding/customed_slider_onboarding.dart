@@ -1,5 +1,5 @@
 import 'package:ecommerce_app/controller/onboarding_controller.dart';
-import 'package:ecommerce_app/core/class/apptheme.dart';
+import 'package:ecommerce_app/core/constant/apptheme.dart';
 import 'package:ecommerce_app/data/datasource/static/static.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
@@ -36,14 +36,20 @@ class CustomedSliderOnboarding extends GetView<OnboardingControllerImplement> {
                   SizedBox(height: 5),
                   Text(
                     onboardingList[index].title!,
-                    style: Theme.of(context).textTheme.headlineMedium,
+                    style: TextStyle(
+                      fontSize: 28,
+                      color: Apptheme.white,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   Divider(color: Apptheme.white, endIndent: 150),
                   Text(
                     onboardingList[index].titleBody!,
-                    style: Theme.of(
-                      context,
-                    ).textTheme.bodyLarge!.copyWith(color: Apptheme.white),
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Apptheme.white,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ],
               ),
@@ -54,9 +60,11 @@ class CustomedSliderOnboarding extends GetView<OnboardingControllerImplement> {
           SizedBox(height: MediaQuery.sizeOf(context).height * 0.04),
           Text(
             onboardingList[index].bodyTitle!,
-            style: Theme.of(
-              context,
-            ).textTheme.titleMedium!.copyWith(color: Apptheme.black),
+            style: TextStyle(
+              fontSize: 20,
+              color: Apptheme.black,
+              fontWeight: FontWeight.w700,
+            ),
           ),
           SizedBox(height: 10),
           Padding(
@@ -64,9 +72,11 @@ class CustomedSliderOnboarding extends GetView<OnboardingControllerImplement> {
             child: Text(
               textAlign: TextAlign.center,
               onboardingList[index].body!,
-              style: Theme.of(context).textTheme.bodyLarge!
-                  .copyWith(color: Colors.black)
-                  .copyWith(fontSize: 15),
+              style: TextStyle(
+                fontSize: 15,
+                color: Apptheme.black,
+                fontWeight: FontWeight.w500,
+              ),
             ),
           ),
         ],

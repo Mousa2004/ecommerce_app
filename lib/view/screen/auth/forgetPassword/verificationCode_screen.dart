@@ -1,5 +1,6 @@
 import 'package:ecommerce_app/controller/auth/verificationCode_controller.dart';
-import 'package:ecommerce_app/core/class/apptheme.dart';
+import 'package:ecommerce_app/core/constant/apptheme.dart';
+
 import 'package:ecommerce_app/view/widget/auth/logo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';

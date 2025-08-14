@@ -1,5 +1,5 @@
 import 'package:ecommerce_app/controller/auth/login_controller.dart';
-import 'package:ecommerce_app/core/class/apptheme.dart';
+import 'package:ecommerce_app/core/constant/apptheme.dart';
 import 'package:ecommerce_app/core/constant/image_links.dart';
 import 'package:ecommerce_app/view/widget/auth/customedbutton.dart';
 import 'package:ecommerce_app/view/widget/auth/customedimagesocial.dart';

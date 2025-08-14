@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/core/class/apptheme.dart';
+import 'package:ecommerce_app/core/constant/apptheme.dart';
 import 'package:flutter/material.dart';
 
 class Customedtext extends StatelessWidget {

@@ -1,5 +1,5 @@
 import 'package:ecommerce_app/controller/auth/register_controller.dart';
-import 'package:ecommerce_app/core/class/apptheme.dart';
+import 'package:ecommerce_app/core/constant/apptheme.dart';
 import 'package:ecommerce_app/view/widget/auth/customedbutton.dart';
 import 'package:ecommerce_app/view/widget/auth/customedtext.dart';
 import 'package:ecommerce_app/view/widget/auth/customedtextfieldauth.dart';

@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/core/class/apptheme.dart';
+import 'package:ecommerce_app/core/constant/apptheme.dart';
 import 'package:ecommerce_app/core/localization/local_controller.dart';
 import 'package:ecommerce_app/view/screen/onboarding.dart';
 import 'package:ecommerce_app/view/widget/language/customedbuttonlang.dart';
