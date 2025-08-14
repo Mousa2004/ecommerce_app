@@ -1,18 +1,20 @@
+import 'package:ecommerce_app/controller/auth/register_controller.dart';
 import 'package:ecommerce_app/core/class/apptheme.dart';
-import 'package:ecommerce_app/view/screen/auth/login_screen.dart';
 import 'package:ecommerce_app/view/widget/auth/customedbutton.dart';
 import 'package:ecommerce_app/view/widget/auth/customedtext.dart';
 import 'package:ecommerce_app/view/widget/auth/customedtextfieldauth.dart';
 import 'package:ecommerce_app/view/widget/auth/logo.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_utils/src/extensions/export.dart';
-import 'package:get/route_manager.dart';
+import 'package:get/get.dart';
 
 class Customedcontainrregister extends StatelessWidget {
   const Customedcontainrregister({super.key});
 
   @override
   Widget build(BuildContext context) {
+    RegisterControllerImplementation controller = Get.put(
+      RegisterControllerImplementation(),
+    );
     return SafeArea(
       child: Container(
         height: MediaQuery.sizeOf(context).height * 0.81,
@@ -39,6 +41,7 @@ class Customedcontainrregister extends StatelessWidget {
             Customedtext(text: "username".tr),
             SizedBox(height: 15),
             Customedtextfieldauth(
+              controller: controller.username,
               text: "username".tr,
               prefixIcon: Icon(Icons.person_pin_rounded),
             ),
@@ -46,6 +49,7 @@ class Customedcontainrregister extends StatelessWidget {
             Customedtext(text: "email".tr),
             SizedBox(height: 15),
             Customedtextfieldauth(
+              controller: controller.email,
               text: "username@gmail.com",
               prefixIcon: Icon(Icons.email_outlined),
             ),
@@ -53,18 +57,24 @@ class Customedcontainrregister extends StatelessWidget {
             Customedtext(text: "password".tr),
             SizedBox(height: 15),
             Customedtextfieldauth(
+              controller: controller.password,
               text: "password".tr,
               prefixIcon: Icon(Icons.lock_outline),
             ),
             SizedBox(height: 30),
-            Customedbutton(text: "register".tr),
+            Customedbutton(
+              text: "register".tr,
+              onPressed: () {
+                controller.register();
+              },
+            ),
             SizedBox(height: 15),
             Row(
               children: [
                 Customedtext(text: "DoYouHaveANAccount".tr),
                 InkWell(
                   onTap: () {
-                    Get.offNamed(LoginScreen.routName);
+                    controller.login();
                   },
                   child: Customedtext(
                     text: "login".tr,

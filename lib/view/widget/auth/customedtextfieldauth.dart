@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 class Customedtextfieldauth extends StatelessWidget {
   final String text;
+  final TextEditingController controller;
   final Widget? suffixIcon;
   final Widget prefixIcon;
 
@@ -11,11 +12,13 @@ class Customedtextfieldauth extends StatelessWidget {
     required this.text,
     this.suffixIcon,
     required this.prefixIcon,
+    required this.controller,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
       decoration: InputDecoration(
         fillColor: Apptheme.white,
         filled: true,

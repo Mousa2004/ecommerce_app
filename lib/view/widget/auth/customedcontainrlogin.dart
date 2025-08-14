@@ -1,20 +1,22 @@
+import 'package:ecommerce_app/controller/auth/login_controller.dart';
 import 'package:ecommerce_app/core/class/apptheme.dart';
 import 'package:ecommerce_app/core/constant/image_links.dart';
-import 'package:ecommerce_app/view/screen/auth/register_screen.dart';
 import 'package:ecommerce_app/view/widget/auth/customedbutton.dart';
 import 'package:ecommerce_app/view/widget/auth/customedimagesocial.dart';
 import 'package:ecommerce_app/view/widget/auth/customedtext.dart';
 import 'package:ecommerce_app/view/widget/auth/customedtextfieldauth.dart';
 import 'package:ecommerce_app/view/widget/auth/logo.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_utils/src/extensions/export.dart';
-import 'package:get/route_manager.dart';
+import 'package:get/get.dart';
 
 class Customedcontainrlogin extends StatelessWidget {
   const Customedcontainrlogin({super.key});
 
   @override
   Widget build(BuildContext context) {
+    LoginControllerImplementation controller = Get.put(
+      LoginControllerImplementation(),
+    );
     return SafeArea(
       child: Container(
         height: MediaQuery.sizeOf(context).height * 0.81,
@@ -41,6 +43,7 @@ class Customedcontainrlogin extends StatelessWidget {
             Customedtext(text: "email".tr),
             SizedBox(height: 15),
             Customedtextfieldauth(
+              controller: controller.email,
               text: "username@gmail.com",
               prefixIcon: Icon(Icons.email_outlined),
             ),
@@ -48,12 +51,15 @@ class Customedcontainrlogin extends StatelessWidget {
             Customedtext(text: "password".tr),
             SizedBox(height: 15),
             Customedtextfieldauth(
+              controller: controller.password,
               text: "password".tr,
               prefixIcon: Icon(Icons.lock_outline),
             ),
             SizedBox(height: 15),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                controller.goToForgetPassword();
+              },
               child: Customedtext(text: "forgtPassword".tr),
             ),
             SizedBox(height: 30),
@@ -75,7 +81,7 @@ class Customedcontainrlogin extends StatelessWidget {
                 Customedtext(text: "Don’tHaveAnAccountYet".tr),
                 InkWell(
                   onTap: () {
-                    Get.offNamed(RegisterScreen.routName);
+                    controller.register();
                   },
                   child: Customedtext(
                     text: "registerForFree".tr,
