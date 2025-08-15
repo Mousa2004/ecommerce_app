@@ -1,20 +1,23 @@
-import 'package:ecommerce_app/view/screen/auth/success_signup_screen.dart';
+import 'package:ecommerce_app/view/screen/auth/verificationcodesignup_screen.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 abstract class RegistercheckemailController extends GetxController {
   checkEmail();
-  goToSuccessRegister();
+  goToVerificationSingUp();
 }
 
 class RegistercheckemailControllerImplementation
     extends RegistercheckemailController {
   late TextEditingController email;
+  GlobalKey<FormState> formstate = GlobalKey<FormState>();
   @override
   checkEmail() {}
   @override
-  goToSuccessRegister() {
-    Get.offNamed(SuccessSignupScreen.routName);
+  goToVerificationSingUp() {
+    if (formstate.currentState!.validate()) {
+      Get.offNamed(VerificationcodesignupScreen.routName);
+    }
   }
 
   @override

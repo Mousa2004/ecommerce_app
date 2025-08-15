@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/controller/auth/registercheckemail_controller.dart';
+import 'package:ecommerce_app/core/functions/validinput.dart';
 import 'package:ecommerce_app/view/widget/auth/customedbutton.dart';
 import 'package:ecommerce_app/view/widget/auth/customedtextfieldauth.dart';
 import 'package:ecommerce_app/view/widget/auth/logo.dart';
@@ -37,16 +38,22 @@ class RegisterverificationemailScreen extends StatelessWidget {
                   style: Theme.of(context).textTheme.titleMedium,
                 ),
                 SizedBox(height: MediaQuery.sizeOf(context).height * 0.02),
-                Customedtextfieldauth(
-                  controller: controller.email,
-                  text: "username@gmail.com",
-                  prefixIcon: Icon(Icons.email_outlined),
+                Form(
+                  key: controller.formstate,
+                  child: Customedtextfieldauth(
+                    validator: (val) {
+                      return validInput(val!, 6, 50, "email");
+                    },
+                    controller: controller.email,
+                    text: "username@gmail.com",
+                    prefixIcon: Icon(Icons.email_outlined),
+                  ),
                 ),
                 SizedBox(height: 24),
                 Customedbutton(
                   text: "checkEmail".tr,
                   onPressed: () {
-                    controller.goToSuccessRegister();
+                    controller.goToVerificationSingUp();
                   },
                 ),
               ],

@@ -7,6 +7,7 @@ abstract class RegisterController extends GetxController {
   late TextEditingController username;
   late TextEditingController email;
   late TextEditingController password;
+  GlobalKey<FormState> formstate = GlobalKey<FormState>();
   login();
   register();
 }
@@ -19,7 +20,9 @@ class RegisterControllerImplementation extends RegisterController {
 
   @override
   register() {
-    Get.offNamed(RegisterverificationemailScreen.routName);
+    if (formstate.currentState!.validate()) {
+      Get.offNamed(RegisterverificationemailScreen.routName);
+    }
   }
 
   @override

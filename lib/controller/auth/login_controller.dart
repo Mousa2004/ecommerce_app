@@ -12,8 +12,15 @@ abstract class LoginController extends GetxController {
 }
 
 class LoginControllerImplementation extends LoginController {
+  GlobalKey<FormState> formstate = GlobalKey<FormState>();
   @override
-  login() {}
+  login() {
+    if (formstate.currentState!.validate()) {
+      print("vaild");
+    } else {
+      print("not vaild");
+    }
+  }
 
   @override
   register() {

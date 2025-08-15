@@ -8,9 +8,12 @@ abstract class ForgetpasswordController extends GetxController {
 
 class ForgetpasswordControllerImplementation extends ForgetpasswordController {
   late TextEditingController email;
+  GlobalKey<FormState> formstate = GlobalKey();
   @override
   checkEmail() {
-    Get.offNamed(VerificationcodeScreen.routName);
+    if (formstate.currentState!.validate()) {
+      Get.offNamed(VerificationcodeScreen.routName);
+    }
   }
 
   @override

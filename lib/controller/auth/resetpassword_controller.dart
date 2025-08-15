@@ -9,10 +9,13 @@ abstract class ResetpasswordController extends GetxController {
 class ResetpasswordControllerImplementation extends ResetpasswordController {
   late TextEditingController password;
   late TextEditingController repassword;
+  GlobalKey<FormState> formstate = GlobalKey<FormState>();
 
   @override
   goToSuccessResetPassword() {
-    Get.offNamed(SuccessresetpasswordScreen.routName);
+    if (formstate.currentState!.validate()) {
+      Get.offNamed(SuccessresetpasswordScreen.routName);
+    }
   }
 
   @override

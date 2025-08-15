@@ -37,6 +37,11 @@ class MyTranslation extends Translations {
       "goToLogin": "الذهاب لتسجيل الدخول",
       "registerSuceesAndEmail": "تم التحقق من الايميل  وانشاء الحساب بنجاح.",
       "registerCheckEmail": "من فضلك ادخل الايميل للتحقق منه",
+      "cantbeEmpty": "لا يمكن ان يكون فارغ",
+      "notValidUsername": "اسم مستخدم غير صالح",
+      "notValidEmail": "الايميل غير صالح",
+      "cantbeLeast": "لايمكن ان تكون اقل من ",
+      "cantbeMost": "لايمكن ان تكون اكبر من ",
     },
     "en": {
       "chooseLanguage": "Choose Language",
@@ -73,6 +78,11 @@ class MyTranslation extends Translations {
       "registerSuceesAndEmail":
           "Email verified and account created successfully.",
       "registerCheckEmail": "Please enter your email to verify it.",
+      "cantbeEmpty": "Can't be empty.",
+      "notValidUsername": "not valid username",
+      "notValidEmail": "not valid email",
+      "cantbeLeast": "can't be Least",
+      "cantbeMost": "can't be Most",
     },
   };
 }
