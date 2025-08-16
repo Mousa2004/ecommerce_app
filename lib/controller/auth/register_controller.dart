@@ -4,12 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 abstract class RegisterController extends GetxController {
+  bool isShow = true;
   late TextEditingController username;
   late TextEditingController email;
   late TextEditingController password;
   GlobalKey<FormState> formstate = GlobalKey<FormState>();
   login();
   register();
+  showPassword();
 }
 
 class RegisterControllerImplementation extends RegisterController {
@@ -23,6 +25,12 @@ class RegisterControllerImplementation extends RegisterController {
     if (formstate.currentState!.validate()) {
       Get.offNamed(VerificationcodesignupScreen.routName);
     }
+  }
+
+  @override
+  showPassword() {
+    isShow = isShow == true ? false : true;
+    update();
   }
 
   @override

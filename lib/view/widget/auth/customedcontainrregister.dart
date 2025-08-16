@@ -65,13 +65,26 @@ class Customedcontainrregister extends StatelessWidget {
               SizedBox(height: 15),
               Customedtext(text: "password".tr),
               SizedBox(height: 15),
-              Customedtextfieldauth(
-                validator: (val) {
-                  return validInput(val!, 3, 50, "password");
-                },
-                controller: controller.password,
-                text: "password".tr,
-                prefixIcon: Icon(Icons.lock_outline),
+              GetBuilder<RegisterControllerImplementation>(
+                builder: (controller) => Customedtextfieldauth(
+                  obscureTex: controller.isShow,
+                  suffixIcon: IconButton(
+                    onPressed: () {
+                      controller.showPassword();
+                    },
+                    icon: Icon(
+                      controller.isShow
+                          ? Icons.visibility_off
+                          : Icons.visibility,
+                    ),
+                  ),
+                  validator: (val) {
+                    return validInput(val!, 3, 50, "password");
+                  },
+                  controller: controller.password,
+                  text: "password".tr,
+                  prefixIcon: Icon(Icons.lock_outline),
+                ),
               ),
               SizedBox(height: 30),
               Customedbutton(

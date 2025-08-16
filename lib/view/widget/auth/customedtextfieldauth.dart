@@ -7,6 +7,7 @@ class Customedtextfieldauth extends StatelessWidget {
   final Widget? suffixIcon;
   final Widget prefixIcon;
   final String? Function(String?) validator;
+  final bool obscureTex;
 
   const Customedtextfieldauth({
     super.key,
@@ -15,12 +16,14 @@ class Customedtextfieldauth extends StatelessWidget {
     required this.prefixIcon,
     required this.controller,
     required this.validator,
+    this.obscureTex = false,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       validator: validator,
+      obscureText: obscureTex,
       controller: controller,
       decoration: InputDecoration(
         fillColor: Apptheme.white,

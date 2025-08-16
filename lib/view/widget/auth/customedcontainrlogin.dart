@@ -56,13 +56,26 @@ class Customedcontainrlogin extends StatelessWidget {
               SizedBox(height: 15),
               Customedtext(text: "password".tr),
               SizedBox(height: 15),
-              Customedtextfieldauth(
-                controller: controller.password,
-                text: "password".tr,
-                prefixIcon: Icon(Icons.lock_outline),
-                validator: (val) {
-                  return validInput(val!, 6, 30, "password");
-                },
+              GetBuilder<LoginControllerImplementation>(
+                builder: (controller) => Customedtextfieldauth(
+                  obscureTex: controller.isShow,
+                  suffixIcon: IconButton(
+                    onPressed: () {
+                      controller.showPassword();
+                    },
+                    icon: Icon(
+                      controller.isShow
+                          ? Icons.visibility_off
+                          : Icons.visibility,
+                    ),
+                  ),
+                  controller: controller.password,
+                  text: "password".tr,
+                  prefixIcon: Icon(Icons.lock_outline),
+                  validator: (val) {
+                    return validInput(val!, 6, 30, "password");
+                  },
+                ),
               ),
               SizedBox(height: 15),
               InkWell(

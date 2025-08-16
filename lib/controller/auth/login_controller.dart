@@ -9,9 +9,11 @@ abstract class LoginController extends GetxController {
   login();
   goToForgetPassword();
   register();
+  showPassword();
 }
 
 class LoginControllerImplementation extends LoginController {
+  bool isShow = true;
   GlobalKey<FormState> formstate = GlobalKey<FormState>();
   @override
   login() {
@@ -30,6 +32,12 @@ class LoginControllerImplementation extends LoginController {
   @override
   goToForgetPassword() {
     Get.offNamed(ForgetpasswordScreen.routName);
+  }
+
+  @override
+  showPassword() {
+    isShow = isShow == true ? false : true;
+    update();
   }
 
   @override
