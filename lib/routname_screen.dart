@@ -1,4 +1,3 @@
-import 'package:ecommerce_app/view/screen/auth/registerverificationemail_screen.dart';
 import 'package:ecommerce_app/view/screen/auth/success_signup_screen.dart';
 import 'package:ecommerce_app/view/screen/auth/forgetPassword/forgetpassword_screen.dart';
 import 'package:ecommerce_app/view/screen/auth/login_screen.dart';
@@ -12,7 +11,9 @@ import 'package:ecommerce_app/view/screen/onboarding.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
 List<GetPage<dynamic>> getPageScreen = [
+  //onboarding
   GetPage(name: Onboarding.routName, page: () => Onboarding()),
+  //Authentication
   GetPage(name: LoginScreen.routName, page: () => LoginScreen()),
   GetPage(name: RegisterScreen.routName, page: () => RegisterScreen()),
   GetPage(
@@ -35,10 +36,7 @@ List<GetPage<dynamic>> getPageScreen = [
     name: SuccessSignupScreen.routName,
     page: () => SuccessSignupScreen(),
   ),
-  GetPage(
-    name: RegisterverificationemailScreen.routName,
-    page: () => RegisterverificationemailScreen(),
-  ),
+
   GetPage(
     name: VerificationcodesignupScreen.routName,
     page: () => VerificationcodesignupScreen(),

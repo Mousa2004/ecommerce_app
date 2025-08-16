@@ -42,6 +42,10 @@ class MyTranslation extends Translations {
       "notValidEmail": "الايميل غير صالح",
       "cantbeLeast": "لايمكن ان تكون اقل من ",
       "cantbeMost": "لايمكن ان تكون اكبر من ",
+      "alert": "تنبيه",
+      "exitToApp": "هل تريد الخروج من التطبيق؟",
+      "yes": "نعم",
+      "no": "لا",
     },
     "en": {
       "chooseLanguage": "Choose Language",
@@ -83,6 +87,10 @@ class MyTranslation extends Translations {
       "notValidEmail": "not valid email",
       "cantbeLeast": "can't be Least",
       "cantbeMost": "can't be Most",
+      "alert": "Alert",
+      "exitToApp": "Do you want to exit the app?",
+      "yes": "Yes",
+      "no": "No",
     },
   };
 }

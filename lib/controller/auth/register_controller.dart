@@ -1,5 +1,5 @@
 import 'package:ecommerce_app/view/screen/auth/login_screen.dart';
-import 'package:ecommerce_app/view/screen/auth/registerverificationemail_screen.dart';
+import 'package:ecommerce_app/view/screen/auth/verificationcodesignup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -21,7 +21,7 @@ class RegisterControllerImplementation extends RegisterController {
   @override
   register() {
     if (formstate.currentState!.validate()) {
-      Get.offNamed(RegisterverificationemailScreen.routName);
+      Get.offNamed(VerificationcodesignupScreen.routName);
     }
   }
 
