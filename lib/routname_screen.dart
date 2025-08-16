@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/core/middleware/mymiddileware.dart';
 import 'package:ecommerce_app/view/screen/auth/success_signup_screen.dart';
 import 'package:ecommerce_app/view/screen/auth/forgetPassword/forgetpassword_screen.dart';
 import 'package:ecommerce_app/view/screen/auth/login_screen.dart';
@@ -41,5 +42,10 @@ List<GetPage<dynamic>> getPageScreen = [
     name: VerificationcodesignupScreen.routName,
     page: () => VerificationcodesignupScreen(),
   ),
-  GetPage(name: LanguageScreen.routName, page: () => LanguageScreen()),
+  //Language
+  GetPage(
+    middlewares: [Mymiddileware()],
+    name: LanguageScreen.routName,
+    page: () => LanguageScreen(),
+  ),
 ];
